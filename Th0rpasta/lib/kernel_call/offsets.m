@@ -100,13 +100,13 @@ _Bool offs_init() {
         off_csb_platform_binary = 0xA4;
         off_csb_platform_path = 0xA8;
     } else if (SYSTEM_VERSION_BETWEEN_OR_EQUAL_TO(@"13.0", @"13.3") && !SYSTEM_VERSION_EQUAL_TO(@"13.3.1")) {
-        off_p_pid = 0x60;
+        off_p_pid = 0x68;//0x60;
         off_task = 0x10;
         off_p_uid = 0x28;
         off_p_gid = 0x2C;
         off_p_ruid = 0x30;
         off_p_rgid = 0x34;
-        off_p_ucred = 0xF8;
+        off_p_ucred = 0x100;//0xF8;
         off_p_csflags = 0x298;
         off_p_comm = 0x250;
         off_p_textvp = 0x230;

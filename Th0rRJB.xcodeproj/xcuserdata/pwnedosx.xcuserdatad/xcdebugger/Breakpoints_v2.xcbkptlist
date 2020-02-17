@@ -2400,7 +2400,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2416,7 +2416,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2432,7 +2432,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2448,7 +2448,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2464,7 +2464,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2480,7 +2480,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2496,7 +2496,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2512,7 +2512,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2960,8 +2960,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1548"
             endingLineNumber = "1548"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "vnode"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3072,8 +3072,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1549"
             endingLineNumber = "1549"
-            landmarkName = "ls(path)"
-            landmarkType = "9">
+            landmarkName = "vnode"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3112,7 +3112,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5D209059-E481-4771-8C8B-AC3ACAE609CD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Th0rpasta/utils/KernelUtils.c"
@@ -3232,7 +3232,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2523"
             endingLineNumber = "2523"
-            landmarkName = "execCmd1(cmd)"
+            landmarkName = "execCmdV1(cmd, argc, argv)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3344,8 +3344,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "379"
             endingLineNumber = "379"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "selfproc()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3840,8 +3840,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "549"
             endingLineNumber = "549"
-            landmarkName = "load_bytes2(obj_file, offset, size)"
-            landmarkType = "9">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -5184,7 +5184,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
             endingLineNumber = "182"
-            landmarkName = "have_kmem_read()"
+            landmarkName = "kmem_free(kaddr, size)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -5192,7 +5192,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6D8A12F0-92B9-4EEF-AAB1-E294298FD633"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Th0rpasta/utils/KernelUtils.c"
@@ -5200,8 +5200,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
-            landmarkName = "ReadKernel64(kaddr)"
-            landmarkType = "9">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -5296,7 +5296,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -5312,7 +5312,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -5408,7 +5408,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -5424,7 +5424,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2006"
             endingLineNumber = "2006"
-            landmarkName = "loadingtweaks()"
+            landmarkName = "installingdebsboys()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -5760,8 +5760,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1449"
             endingLineNumber = "1449"
-            landmarkName = "vnode_resolve"
-            landmarkType = "16">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -5776,8 +5776,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1443"
             endingLineNumber = "1443"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "runDpkg(args, forceDeps)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -6084,14 +6084,14 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "C4449930-1894-4326-9BD3-C75974D7AAD3 - 7e3f3bd5bfc5ff1d"
+                  uuid = "C4449930-1894-4326-9BD3-C75974D7AAD3 - fd60d3ba2c7d781b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "get_proc_struct_for_pid_ff"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -6099,14 +6099,14 @@
                   offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  uuid = "C4449930-1894-4326-9BD3-C75974D7AAD3 - f76dd095f28ec3"
+                  uuid = "C4449930-1894-4326-9BD3-C75974D7AAD3 - 83a885bf064a09c5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__get_proc_struct_for_pid_ff_block_invoke"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -6114,14 +6114,14 @@
                   offsetFromSymbolStart = "8">
                </Location>
                <Location
-                  uuid = "C4449930-1894-4326-9BD3-C75974D7AAD3 - 32e5d80481d96739"
+                  uuid = "C4449930-1894-4326-9BD3-C75974D7AAD3 - b1ba306b1261e03f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__destroy_helper_block_8_32r"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -6227,14 +6227,14 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "D95716F3-0F0D-4D9D-80CE-0A8CE33904D6 - 7e3f3bd5bfc5ff1d"
+                  uuid = "D95716F3-0F0D-4D9D-80CE-0A8CE33904D6 - fd60d3ba2c7d781b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "get_proc_struct_for_pid_ff"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -6242,14 +6242,14 @@
                   offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  uuid = "D95716F3-0F0D-4D9D-80CE-0A8CE33904D6 - f76dd095f28ec3"
+                  uuid = "D95716F3-0F0D-4D9D-80CE-0A8CE33904D6 - 83a885bf064a09c5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__get_proc_struct_for_pid_ff_block_invoke"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -6257,14 +6257,14 @@
                   offsetFromSymbolStart = "8">
                </Location>
                <Location
-                  uuid = "D95716F3-0F0D-4D9D-80CE-0A8CE33904D6 - 32e5d80481d96739"
+                  uuid = "D95716F3-0F0D-4D9D-80CE-0A8CE33904D6 - b1ba306b1261e03f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__destroy_helper_block_8_32r"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/lib/remap_tfp_set_hsp/remap_tfp_set_hsp.c"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -6480,38 +6480,6 @@
             endingLineNumber = "1015"
             landmarkName = "preMountFS(thedisk, root_fs, snapshots, origfs)"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "9BFC1E46-F696-40ED-A558-ACCE63F2429D - 6877d14c37bc1f48"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "preMountFS"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1016"
-                  endingLineNumber = "1016"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "9BFC1E46-F696-40ED-A558-ACCE63F2429D - 6877d14c37bc1f48"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "preMountFS"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1016"
-                  endingLineNumber = "1016"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -6530,34 +6498,34 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "A9DDA742-7D7F-4B1B-A13A-A6E2CA599243 - 6877d14c37bc1f48"
+                  uuid = "A9DDA742-7D7F-4B1B-A13A-A6E2CA599243 - 78a292c53e000921"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "preMountFS"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1016"
                   endingLineNumber = "1016"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "288">
                </Location>
                <Location
-                  uuid = "A9DDA742-7D7F-4B1B-A13A-A6E2CA599243 - 6877d14c37bc1f48"
+                  uuid = "A9DDA742-7D7F-4B1B-A13A-A6E2CA599243 - 78a292c53e000921"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "preMountFS"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1016"
                   endingLineNumber = "1016"
-                  offsetFromSymbolStart = "96">
+                  offsetFromSymbolStart = "312">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -6590,8 +6558,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
             endingLineNumber = "78"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "set_csflags_fr(proc, flags, value)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -6992,6 +6960,38 @@
             endingLineNumber = "1115"
             landmarkName = "remountFS(shouldRestore)"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "E25F9088-1245-4509-9F5B-438737F7399B - 832bd32c13c9ee70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "remountFS"
+                  moduleName = "Th0rRJB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1115"
+                  endingLineNumber = "1115"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "E25F9088-1245-4509-9F5B-438737F7399B - 832bd32c13c9ee70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "remountFS"
+                  moduleName = "Th0rRJB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1115"
+                  endingLineNumber = "1115"
+                  offsetFromSymbolStart = "552">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -7008,38 +7008,6 @@
             endingLineNumber = "1122"
             landmarkName = "remountFS(shouldRestore)"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "254F573B-AACA-4DED-8F61-CD6A2A0D5AD1 - 93fe90a51a75f819"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "remountFS"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1122"
-                  endingLineNumber = "1122"
-                  offsetFromSymbolStart = "972">
-               </Location>
-               <Location
-                  uuid = "254F573B-AACA-4DED-8F61-CD6A2A0D5AD1 - 93fe90a51a75f819"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "remountFS"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1122"
-                  endingLineNumber = "1122"
-                  offsetFromSymbolStart = "988">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -7056,38 +7024,6 @@
             endingLineNumber = "1121"
             landmarkName = "remountFS(shouldRestore)"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "C8DF6A92-8011-4F60-AE74-2A89427C2A7A - 93fe90a51a75f819"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "remountFS"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1121"
-                  endingLineNumber = "1121"
-                  offsetFromSymbolStart = "800">
-               </Location>
-               <Location
-                  uuid = "C8DF6A92-8011-4F60-AE74-2A89427C2A7A - 93fe90a51a75f819"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "remountFS"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1121"
-                  endingLineNumber = "1121"
-                  offsetFromSymbolStart = "808">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -7202,34 +7138,34 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "80B47FF9-9FD9-4E8B-A297-C4CD127CBA48 - 917da600cff10e91"
+                  uuid = "80B47FF9-9FD9-4E8B-A297-C4CD127CBA48 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2041"
                   endingLineNumber = "2041"
-                  offsetFromSymbolStart = "1052">
+                  offsetFromSymbolStart = "720">
                </Location>
                <Location
-                  uuid = "80B47FF9-9FD9-4E8B-A297-C4CD127CBA48 - 917da600cff10e91"
+                  uuid = "80B47FF9-9FD9-4E8B-A297-C4CD127CBA48 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2041"
                   endingLineNumber = "2041"
-                  offsetFromSymbolStart = "1064">
+                  offsetFromSymbolStart = "728">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -7282,33 +7218,33 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "BEAFCE7A-12F0-4DAF-A494-43AE6AD597B5 - 917da600cff10e91"
+                  uuid = "BEAFCE7A-12F0-4DAF-A494-43AE6AD597B5 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2071"
-                  endingLineNumber = "2071"
+                  startingLineNumber = "2073"
+                  endingLineNumber = "2073"
                   offsetFromSymbolStart = "2016">
                </Location>
                <Location
-                  uuid = "BEAFCE7A-12F0-4DAF-A494-43AE6AD597B5 - 917da600cff10e91"
+                  uuid = "BEAFCE7A-12F0-4DAF-A494-43AE6AD597B5 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2071"
-                  endingLineNumber = "2071"
+                  startingLineNumber = "2073"
+                  endingLineNumber = "2073"
                   offsetFromSymbolStart = "2184">
                </Location>
             </Locations>
@@ -7330,33 +7266,33 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "5DBB948D-4B65-46A9-BF91-C76086A5096C - 917da600cff10e91"
+                  uuid = "5DBB948D-4B65-46A9-BF91-C76086A5096C - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2071"
-                  endingLineNumber = "2071"
+                  startingLineNumber = "2073"
+                  endingLineNumber = "2073"
                   offsetFromSymbolStart = "2016">
                </Location>
                <Location
-                  uuid = "5DBB948D-4B65-46A9-BF91-C76086A5096C - 917da600cff10e91"
+                  uuid = "5DBB948D-4B65-46A9-BF91-C76086A5096C - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2071"
-                  endingLineNumber = "2071"
+                  startingLineNumber = "2073"
+                  endingLineNumber = "2073"
                   offsetFromSymbolStart = "2184">
                </Location>
             </Locations>
@@ -7410,34 +7346,34 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "AACEF87C-A57E-405D-BAFE-02705271277D - 917da600cff10e91"
+                  uuid = "AACEF87C-A57E-405D-BAFE-02705271277D - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2093"
-                  endingLineNumber = "2093"
-                  offsetFromSymbolStart = "5776">
+                  startingLineNumber = "2092"
+                  endingLineNumber = "2092"
+                  offsetFromSymbolStart = "5400">
                </Location>
                <Location
-                  uuid = "AACEF87C-A57E-405D-BAFE-02705271277D - 917da600cff10e91"
+                  uuid = "AACEF87C-A57E-405D-BAFE-02705271277D - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2093"
-                  endingLineNumber = "2093"
-                  offsetFromSymbolStart = "5944">
+                  startingLineNumber = "2092"
+                  endingLineNumber = "2092"
+                  offsetFromSymbolStart = "5568">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -7456,6 +7392,38 @@
             endingLineNumber = "2132"
             landmarkName = "getOffsets()"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "4D9C3AC9-EB14-407D-A5EE-A22A3AAD001C - 81a8e589c64d18f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "getOffsets"
+                  moduleName = "Th0rRJB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2132"
+                  endingLineNumber = "2132"
+                  offsetFromSymbolStart = "12216">
+               </Location>
+               <Location
+                  uuid = "4D9C3AC9-EB14-407D-A5EE-A22A3AAD001C - 81a8e589c64d18f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "getOffsets"
+                  moduleName = "Th0rRJB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2132"
+                  endingLineNumber = "2132"
+                  offsetFromSymbolStart = "12384">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -7504,38 +7472,6 @@
             endingLineNumber = "2046"
             landmarkName = "getOffsets()"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "942B738A-C000-494D-9FF3-32D88C53FD93 - 917da600cff10e91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "getOffsets"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2046"
-                  endingLineNumber = "2046"
-                  offsetFromSymbolStart = "1272">
-               </Location>
-               <Location
-                  uuid = "942B738A-C000-494D-9FF3-32D88C53FD93 - 917da600cff10e91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "getOffsets"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2046"
-                  endingLineNumber = "2046"
-                  offsetFromSymbolStart = "1284">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -7566,8 +7502,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "567"
             endingLineNumber = "567"
-            landmarkName = "find_macho_header(file)"
-            landmarkType = "9">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -7586,34 +7522,34 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "E1C64015-EB77-4CBF-A2E1-99048A945552 - 917da600cff10e91"
+                  uuid = "E1C64015-EB77-4CBF-A2E1-99048A945552 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2039"
                   endingLineNumber = "2039"
-                  offsetFromSymbolStart = "720">
+                  offsetFromSymbolStart = "528">
                </Location>
                <Location
-                  uuid = "E1C64015-EB77-4CBF-A2E1-99048A945552 - 917da600cff10e91"
+                  uuid = "E1C64015-EB77-4CBF-A2E1-99048A945552 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2039"
                   endingLineNumber = "2039"
-                  offsetFromSymbolStart = "728">
+                  offsetFromSymbolStart = "536">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -7634,34 +7570,34 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "53FA0B94-9905-44D1-8823-C9B57C7B2B93 - 917da600cff10e91"
+                  uuid = "53FA0B94-9905-44D1-8823-C9B57C7B2B93 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2039"
                   endingLineNumber = "2039"
-                  offsetFromSymbolStart = "720">
+                  offsetFromSymbolStart = "528">
                </Location>
                <Location
-                  uuid = "53FA0B94-9905-44D1-8823-C9B57C7B2B93 - 917da600cff10e91"
+                  uuid = "53FA0B94-9905-44D1-8823-C9B57C7B2B93 - 81a8e589c64d18f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "getOffsets"
-                  moduleName = "Th0r"
+                  moduleName = "Th0rRJB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2039"
                   endingLineNumber = "2039"
-                  offsetFromSymbolStart = "728">
+                  offsetFromSymbolStart = "536">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -8156,8 +8092,8 @@
             filePath = "Th0rpasta/lib/PFOffs/PFOffs.h"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -8208,38 +8144,6 @@
             endingLineNumber = "2046"
             landmarkName = "getOffsets()"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "073B3CC7-5DD7-44D6-AF61-2BDA9F52C49F - 917da600cff10e91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "getOffsets"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2046"
-                  endingLineNumber = "2046"
-                  offsetFromSymbolStart = "1272">
-               </Location>
-               <Location
-                  uuid = "073B3CC7-5DD7-44D6-AF61-2BDA9F52C49F - 917da600cff10e91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "getOffsets"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2046"
-                  endingLineNumber = "2046"
-                  offsetFromSymbolStart = "1284">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -8256,6 +8160,38 @@
             endingLineNumber = "2048"
             landmarkName = "getOffsets()"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "AEF1B264-AED0-41A5-B52A-64BC52A910C8 - 81a8e589c64d18f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "getOffsets"
+                  moduleName = "Th0rRJB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2048"
+                  endingLineNumber = "2048"
+                  offsetFromSymbolStart = "1272">
+               </Location>
+               <Location
+                  uuid = "AEF1B264-AED0-41A5-B52A-64BC52A910C8 - 81a8e589c64d18f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "getOffsets"
+                  moduleName = "Th0rRJB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pwnedosx/Documents/GitHub/Th0r-Pasta-master_RJB_1/Th0r_RJB1/Th0rpasta/utils/utils.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2048"
+                  endingLineNumber = "2048"
+                  offsetFromSymbolStart = "1284">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -8592,38 +8528,6 @@
             endingLineNumber = "2037"
             landmarkName = "getOffsets()"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "BB7F4E3D-4C95-4EEA-8E85-7DC455B49DD0 - 917da600cff10e91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "getOffsets"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2037"
-                  endingLineNumber = "2037"
-                  offsetFromSymbolStart = "528">
-               </Location>
-               <Location
-                  uuid = "BB7F4E3D-4C95-4EEA-8E85-7DC455B49DD0 - 917da600cff10e91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "getOffsets"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2037"
-                  endingLineNumber = "2037"
-                  offsetFromSymbolStart = "536">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -8638,8 +8542,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1568"
             endingLineNumber = "1568"
-            landmarkName = "systemCmd(cmd)"
-            landmarkType = "9">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9120,38 +9024,6 @@
             endingLineNumber = "1167"
             landmarkName = "installSSH()"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "B06C461E-77A0-4731-8D12-8BEFD10985BF - d6f7e3dab1720f5a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "installSSH"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1167"
-                  endingLineNumber = "1167"
-                  offsetFromSymbolStart = "2376">
-               </Location>
-               <Location
-                  uuid = "B06C461E-77A0-4731-8D12-8BEFD10985BF - d6f7e3dab1720f5a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "installSSH"
-                  moduleName = "Th0r"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pwnedosx/Downloads/Th0r-Pasta-master_BOTHSPLOIT_ios13/Th0rpasta/utils/utils.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1167"
-                  endingLineNumber = "1167"
-                  offsetFromSymbolStart = "2448">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9342,8 +9214,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "791"
             endingLineNumber = "791"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getKernproc()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9486,8 +9358,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "set_cs_platform_binary(proc, value)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9573,38 +9445,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "56F4BD70-1D31-4556-9D04-D57C869C80FD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Th0rpasta/utils/shenanigans.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "runShenPatch()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A044D9A5-F584-47F3-B4E1-5C11CA6BBCD2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Th0rpasta/utils/shenanigans.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "runShenPatch()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "45C99FCB-B1DC-4456-B889-028460836B67"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -9646,22 +9486,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
-            landmarkName = "runShenPatch()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5A2C3C12-EC2B-4058-A2F9-CD16043650ED"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Th0rpasta/utils/shenanigans.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
             landmarkName = "runShenPatch()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9726,40 +9550,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "get_kernel_cred_addr()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "51A5C47C-FD12-4F35-9092-748B7A2E7D5B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Th0rpasta/utils/shenanigans.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "runShenPatch()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "24E0FFC0-A979-4B47-98D0-6364E2A78A7E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Th0rpasta/utils/shenanigans.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "runShenPatch()"
-            landmarkType = "9">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9846,7 +9638,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0DD21F25-294A-4508-94AA-3D30BA04EC4E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Th0rpasta/utils/KernelUtils.c"
@@ -9862,7 +9654,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "30862B8D-5BB9-4C8B-B1EA-B39BCD1DA6AC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Th0rpasta/utils/KernelUtils.c"
@@ -9870,7 +9662,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
             endingLineNumber = "135"
-            landmarkName = "WriteKernel64(kaddr, val)"
+            landmarkName = "WriteKernel32(kaddr, val)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9878,7 +9670,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "90D33DD9-4AE2-4859-B4A5-8FE12E18FBAA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Th0rpasta/utils/KernelUtils.c"
@@ -9903,22 +9695,6 @@
             startingLineNumber = "679"
             endingLineNumber = "679"
             landmarkName = "setUID(uid, proc)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7F40DE43-767D-4016-9CAF-5385AF162042"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Th0rpasta/utils/shenanigans.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "runShenPatch()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9951,6 +9727,214 @@
             startingLineNumber = "1142"
             endingLineNumber = "1142"
             landmarkName = "oob_timestamp()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61E88EAB-AC50-4B24-B2D6-7D7ECA57CF08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/shenanigans.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "set_csflags_fr(proc, flags, value)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50DE7609-64F7-4C42-8666-9D0D9DBAE61A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/utils.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "set_csflags(proc)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1B7EAAC-73D6-4243-A442-0CC011A5CF55"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2360"
+            endingLineNumber = "2360"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65B1321C-1ADD-4EA0-A028-D92743F63334"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2093"
+            endingLineNumber = "2093"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B48664F-86D6-4C2D-B7E8-3DF515A04002"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2097"
+            endingLineNumber = "2097"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B273F6E-E284-4743-99DF-7186B8666001"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2238"
+            endingLineNumber = "2238"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9012E4B-9855-4D6C-A02A-821B28452BAE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2308"
+            endingLineNumber = "2308"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED6136BF-51AF-4D9C-9819-15E32A584C87"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2343"
+            endingLineNumber = "2343"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F14F8B8C-870A-4ACF-B92C-1AADB3C1F947"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/utils.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "677"
+            endingLineNumber = "677"
+            landmarkName = "setUID(uid, proc)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96921D0A-6586-4A0C-A252-F98AA33BE8E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/utils.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "666"
+            endingLineNumber = "666"
+            landmarkName = "setGID(gid, proc)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71EA19C4-E663-4563-ADD1-D3C5D84A9BE2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/utils.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "667"
+            endingLineNumber = "667"
+            landmarkName = "setGID(gid, proc)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB67EDF5-ABCA-49B8-A3C9-3B53E4EF431F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/shenanigans.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "runShenPatch()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79038C81-7F7B-42E4-AD6C-44265784A7F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/shenanigans.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "runShenPatch()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

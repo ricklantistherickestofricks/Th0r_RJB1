@@ -22,12 +22,15 @@ void rootMe(uint64_t proc);
 void unsandbox(uint64_t proc);
 void remountFS(bool shouldRestore);
 void setUID (uid_t uid, uint64_t proc);
+void setGID(gid_t gid, uint64_t proc);
 
 void restoreRootFS(void);
 int trust_file(NSString *path);
 void installSubstitute(void);
 void saveOffs(void);
 void createWorkingDir(void);
+void createJBDir(void);
+
 void installSSH(void);
 void xpcFucker(void);
 extern uint64_t set_csflags(uint64_t proc);

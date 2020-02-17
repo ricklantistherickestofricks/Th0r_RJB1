@@ -118,13 +118,13 @@ void runShenPatch()
     WriteKernel64(GETOFFSET(shenanigans), ShenanigansPatch);
     uint64_t myOriginalCredAddr = myCredAddr = give_creds_to_process_at_addr(proc, kernelCredAddr);
     LOG("myOriginalCredAddr = " ADDR, myOriginalCredAddr);
-    
+    setGID(getgid(), proc);
     setUID(getuid(), proc);
     //setuid(0);
     printf("setuid: %d, uid: %d\n", setuid(0), getuid());
-    if (getuid() != 0)
+    if (getgid() != 0)
     {
-        printf("failed to de-elevate to uid: %d\n", getuid());
+        printf("failed to de-elevate to guid: %d\n", getgid());
         //elevateRet = KERN_FAILURE;
         //goto out;
     }

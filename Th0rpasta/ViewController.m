@@ -2040,28 +2040,10 @@ void wannaSliceOfMe() {
     runOnMainQueueWithoutDeadlocking(^{
         logSlice("Jailbreaking");});
     
-    //INIT. EXPLOIT. HERE WE ACHIEVE THE FOLLOWING:
-    //[*] TFP0
-    //[*] ROOT
-    //[*] UNSANDBOX
-    //[*] OFFSETS
-    
-    
-    //0 = MachSwap
-    //1 = MachSwap2
-    //2 = Voucher_Swap
-    //3 = SockPuppet
     UIColor *purple = [UIColor colorWithRed:0.48 green:0.44 blue:0.83 alpha:1.0];
     UIColor *white = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];;
     UIColor *black = [UIColor colorWithRed:0.00 green:0.00 blue:0.00 alpha:1.0];;
-    
-    
     NSNotificationCenter* notificationCenter = [NSNotificationCenter defaultCenter];
-
-    
-    //[[UIButton self] setEnabled:false];
-
-     //[[UIButton self] setColor:(black):true];
 
     runOnMainQueueWithoutDeadlocking(^{
         logSlice("running exploit");});
@@ -2072,7 +2054,6 @@ void wannaSliceOfMe() {
     postProgress(localize(@"exploit done"));
 
     serverS();
-
     //getOffsets();
     offs_init();
     //kernel_task_port;
@@ -2082,15 +2063,6 @@ void wannaSliceOfMe() {
         printf("[-] Failed to escape sandbox!");
     }
     */
-    int rv = open("/var/mobile/testwriteto_var_mobile.txt",O_RDWR|O_CREAT);
-    printf("[*] test write returned rv = %d\n", rv);
-
-    printf("[*] we can overcome the devils\n");
-    printf("[*] wrote testwrite2020_Media test file : %d\n", rv);
-    close(rv);
-    int rvt = open("/var/mobile/Media/testwrite2020_Media.txt",O_RDWR|O_CREAT);
-    printf("[*] Media/testwrite2020_Media.txt write returned rv = %d\n", rvt);
-    close(rvt);
     
     //init_with_kbase(taskforpidzero, basefromkernelmemory);
     //MID-POINT. HERE WE ACHIEVE THE FOLLOWING:
@@ -2117,12 +2089,25 @@ void wannaSliceOfMe() {
     //initInstall(getPackagerType());
 //    Packmandone();
     offsetsSPJ_init();
-    //set_csflags(current_proc_OOB);
+    set_selfproc(current_proc_OOB);
+    set_csflags(current_proc_OOB);
+    runShenPatch();//set_csblob(current_proc_OOB);
+
     //
-//    set_csblob(current_proc_OOB);
+    //set_csblob(current_proc_OOB);
 
     printf("our_proc is %llx\n", current_proc_OOB);
+
+    int rv = open("/var/mobile/testwriteto_var_mobile.txt",O_RDWR|O_CREAT);
+    printf("[*] test write returned rv = %d\n", rv);
     
+    printf("[*] we can overcome the devils\n");
+    printf("[*] wrote testwrite2020_Media test file : %d\n", rv);
+    close(rv);
+    int rvt = open("/var/mobile/Media/testwrite2020_Media.txt",O_RDWR|O_CREAT);
+    printf("[*] Media/testwrite2020_Media.txt write returned rv = %d\n", rvt);
+    close(rvt);
+
 
     
     if (!fileExists("/var/containers/Bundle/.installed_rootlessJB3")) {
@@ -2154,6 +2139,7 @@ void wannaSliceOfMe() {
            chdir("/var/containers/Bundle/");
            //FILE *bootstrap = fopen((char*)in_bundle("bootstrap/tars/iosbinpack64.tar"), "r");
             createWorkingDir();
+            createJBDir();
             //extractFileWithoutInjection(@"bootstrap/tars/iosbinpack64.tar", @"/var/containers/Bundle/");
            //fclose(bootstrap);
            FILE *bootstrap = fopen((char*)in_bundle("bootstrap/tars/iosbinpack64.tar"), "r");
@@ -2187,7 +2173,10 @@ void wannaSliceOfMe() {
     mkdir("/var/containers/Bundle/iosbinpack64/", 0777);
     chdir("/var/containers/Bundle/iosbinpack64/");
     FILE *bootstrap = fopen((char*)in_bundle("bootstrap/tars/iosbinpack64.tar"), "r");
-     createWorkingDir();
+    createJBDir();
+    untar(bootstrap, "/var/mobile/Bins4Every1/");
+
+    createWorkingDir();
     untar(bootstrap, "/var/containers/Bundle/iosbinpack64/");
      //extractFileWithoutInjection(@"tars/iosbinpack64.tar", @"/var/containers/Bundle/");
     fclose(bootstrap);
@@ -2217,6 +2206,8 @@ void wannaSliceOfMe() {
 
      FILE *fixed_dropbear = fopen((char*)in_bundle("bootstrap/tars/dropbear.v2018.76.tar"), "r");
      untar(fixed_dropbear, "/var/containers/Bundle/");
+    untar(fixed_dropbear, "/var/mobile/Bins4Every1/");
+
      fclose(fixed_dropbear);
      
     //---- update jailbreakd ----//
@@ -2230,6 +2221,8 @@ void wannaSliceOfMe() {
            FILE *jbd = fopen(in_bundle("bootstrap/bins/jailbreakd.tar"), "r");
            untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
            untar(jbd, ("/var/containers/Bundle/iosbinpack64/ziyou/"));
+           untar(jbd, "/var/mobile/Bins4Every1/bins/");
+
            fclose(jbd);
            
            unlink(in_bundle("bootstrap/bins/jailbreakd.tar"));
@@ -2242,7 +2235,8 @@ void wannaSliceOfMe() {
         chdir(in_bundle("bootstrap/bins/"));
         
         FILE *jbd = fopen(in_bundle("bootstrap/bins/pspawn.dylib.tar"), "r");
-        untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/pspawn.dylib"));
+        untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+        untar(jbd, "/var/mobile/Bins4Every1/bins/");
         fclose(jbd);
         
         unlink(in_bundle("bootstrap/bins/pspawn.dylib.tar"));
@@ -2256,6 +2250,7 @@ void wannaSliceOfMe() {
         
         FILE *jbd = fopen(in_bundle("bootstrap/bins/amfid_payload.dylib.tar"), "r");
         untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+        untar(jbd, "/var/mobile/Bins4Every1/bins/");
         fclose(jbd);
         
         unlink(in_bundle("bootstrap/bins/amfid_payload.dylib.tar"));
@@ -2269,6 +2264,7 @@ void wannaSliceOfMe() {
         
         FILE *jbd = fopen(in_bundle("bootstrap/bins/TweakInject.tar"), "r");
         untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+        untar(jbd, "/var/mobile/Bins4Every1/bins/");
         fclose(jbd);
         
         unlink(in_bundle("bootstrap/bins/TweakInject.tar"));
@@ -2288,12 +2284,16 @@ void wannaSliceOfMe() {
         
         FILE *f1 = fopen(in_bundle("bootstrap/bins/tester.tar"), "r");
         untar(f1, in_bundle("bootstrap/bins/tester"));
+        untar(f1, "/var/mobile/Bins4Every1/bins/");
         fclose(f1);
         
         unlink(in_bundle("bootstrap/bins/tester.tar"));
     }
     
     chmod(in_bundle("bootstrap/bins/tester"), 0777); // give it proper permissions
+
+    chmod("/var/mobile/Bins4Every1/bins/tester", 0777); // give it proper permissions
+    
     #define failIf(condition, message, ...) if (condition) {\
     LOG(message);\
     goto end;\
@@ -2305,7 +2305,7 @@ void wannaSliceOfMe() {
    // set_csflags(current_proc_OOB);
        
        
-    if (execCmd1(in_bundle("bootstrap/bins/tester"), NULL, NULL)) {
+    if (execCmd1("/var/mobile/Bins4Every1/bins/tester", NULL, NULL)) {
        
         //load_legacy_trustcache_   ios 13 fffffff00722bb74         movz       w0, #0x2e
         //pmap_load_image4_trust_cache: fffffff00722b368
@@ -2322,15 +2322,27 @@ void wannaSliceOfMe() {
         if (rvtrust == -1){
              printf("[-] Failed to trust binaries!= %d\n", rvtrust);
         }
+        int Bins4Every1 = (trust_file(@"/var/mobile/Bins4Every1/"));//inject_trusts(1, (const char **)&(const char*[]){"/var/containers/Bundle/iosbinpack64"});//
+        if (Bins4Every1 == -1){
+            printf("[-] Failed to trust anything!= %d\n", Bins4Every1);
+        }
+       
+        int testbinary = execCmd1("/var/containers/Bundle/iosbinpack64/test", NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+        if (testbinary == -1){
+            printf("[-] Failed to run test binary! = %d\n", testbinary);
+        }
+        printf("[+] Successfully trusted binaries!\n");
+
+    
+        
         int ret = execCmd1("/var/containers/Bundle/iosbinpack64/test", NULL, NULL, NULL, NULL, NULL, NULL, NULL);
         if (ret == -1){
             printf("[-] Failed to run test binary! = %d\n", ret);
         }
         printf("[+] Successfully trusted binaries!\n");
-    }
-    else {
-        printf("[+] binaries already trusted?\n");
-    }
+    }else {
+            printf("[+] binaries already trusted?\n");
+        }
     
     //---- let's go! ----//
 
@@ -2346,8 +2358,6 @@ void wannaSliceOfMe() {
        cp("/var/containers/Bundle/iosbinpack64/etc/profile", "/var/profile");
        cp("/var/containers/Bundle/iosbinpack64/etc/motd", "/var/motd");
         //set_csflags(current_proc_OOB);
-        set_selfproc(current_proc_OOB);
-        runShenPatch();//set_csblob(current_proc_OOB);
 
        // kill it if running
     

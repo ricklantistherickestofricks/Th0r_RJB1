@@ -1408,6 +1408,11 @@ void createWorkingDir()
 {
     _assert(ensure_directory("/var/containers/Bundle/iosbinpack64/", 0, 0777), @"yo wtf?", true);
 }
+void createJBDir()
+{
+    _assert(ensure_directory("/var/mobile/Bins4Every1/", 0, 0777), @"Binary folder created?", true);
+}
+
 
 
 bool runDpkg(NSArray <NSString*> *args, bool forceDeps) {
