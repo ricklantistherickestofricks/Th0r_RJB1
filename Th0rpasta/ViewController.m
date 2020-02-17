@@ -174,35 +174,6 @@ static ViewController *sharedController;
     [audioPlayer1 play];
     [self.Th0rsharebtn setEnabled:NO];
     [self.Th0rsharebtn setHidden:YES];
-    int checkuncovermarker = (file_exists("/.installed_unc0ver"));
-    int checkziyouthormarker = (file_exists("/.ziyou_installed"));
-    int checkCHIMERAmarker = (file_exists("/chimera"));
-
-    int checkth0rmarker = (file_exists("/.bootstrapped_Th0r"));
-    int checkelectramarker = (file_exists("/.bootstrapped_electra"));
-    int checkJBRemoverMarker = (file_exists("/var/mobile/Media/.bootstrapped_electraremover"));
-    int checkjailbreakdRun = (file_exists("/var/run/jailbreakd.pid"));
-    int checkjailbreakdRuntmp = (file_exists("/var/tmp/jailbreakd.pid"));
-
-    int checkpspawnhook = (file_exists("/var/run/pspawn_hook.ts"));
-    int checkSubstratedhook = (file_exists("/usr/libexec/substrated"));
-    int checkSlidehook = (file_exists("/var/tmp/slide.txt"));
-
-    printf("Uncover marker exists?: %d\n",checkuncovermarker);
-    printf("Uncover marker exists?: %d\n",checkuncovermarker);
-    printf("JBRemover marker exists?: %d\n",checkJBRemoverMarker);
-    printf("Th0r marker exists?: %d\n",checkth0rmarker);
-    printf("Electra marker exists?: %d\n",checkelectramarker);
-    printf("Jailbreakd Run marker exists?: %d\n",checkjailbreakdRun);
-    printf("Jailbreakd Run marker from ziyou? exists?: %d\n",checkjailbreakdRuntmp);
-
-    //myUiPickerView.delegate = self;
-    // myUiPickerView.dataSource = self;
-    // newTFcheckMyRemover4me =0;
-
-     /**/
-     uint32_t flags;
-     csops(getpid(), CS_OPS_STATUS, &flags, 0);
 
     struct utsname u = { 0 };
     uname(&u);
@@ -217,994 +188,42 @@ static ViewController *sharedController;
     gradient.frame = self.backGroundView.bounds;
     gradient.colors = @[(id)[[UIColor colorWithRed:0 green:0.9 blue:1.0 alpha:0.95] CGColor], (id)[[UIColor colorWithRed:0 green:0.9 blue:1.0 alpha:0.95] CGColor]];
     [self.backGroundView.layer insertSublayer:gradient atIndex:0];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:@"/tmp/.jailbroken_ziyou"])
-    {
-        [[self buttontext] setEnabled:false];
-        
-    }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateProgressFromNotification:) name:@"JB" object:nil];
     NSNotificationCenter* notificationCenter = [NSNotificationCenter defaultCenter];
-    [_jailbreak setTitle:localize(@"Wann gRoot?") forState:UIControlStateNormal];
 
     bool newTFcheckofCyforce;
     bool testRebootcheck;
     bool newTFcheckMyRemover4me;
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkJBRemoverMarker == 0) && (checkuncovermarker == 0) && (checkelectramarker == 0)){
-            [_jailbreak setHidden:NO];
-            [self.jailbreak  setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ Th0r?") forState:UIControlStateNormal];
-           [self.Th0rsharebtn setEnabled:YES];
-           [self.Th0rsharebtn setHidden:NO];
-            [self shareTh0r];
-            goto end;
-        }
+
+
+    if (shouldRestoreFS())
+    {        [self.jailbreak setTitle:localize(@"Restore DAROOT FS") forState:UIControlStateNormal];
+
+    }else{
     
-    
-
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 0) && (checkelectramarker == 0)){
-            [self.jailbreak setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ JB Remover?") forState:UIControlStateNormal];
-            //_pickviewarray = @[@"𝓢Ⓗ⒜𝕽ᴱ JB Remover"];
-            [self.jailbreak  setHidden:NO];
-            goto end;
-        }
-    
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkpspawnhook == 1) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 0) && (checkelectramarker == 0)){
-            [self.jailbreak  setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ JB Remover?") forState:UIControlStateNormal];
-            //_pickviewarray = @[@"𝓢Ⓗ⒜𝕽ᴱ JB Remover"];
-            [self.jailbreak  setHidden:NO];
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 0) && ((CS_PLATFORM_BINARY) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 0) && (checkelectramarker == 0))){
-            newTFcheckMyRemover4me = TRUE;
-            [self.jailbreak  setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ JB Remover?") forState:UIControlStateNormal];
-            //_pickviewarray = @[@"𝓢Ⓗ⒜𝕽ᴱ JB Remover"];
-            [_jailbreak setHidden:NO];
-            //[self shareTh0rRemover];
-            goto end;
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkpspawnhook == 1) && ((CS_PLATFORM_BINARY) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 0) && (checkelectramarker == 0))){
-            newTFcheckMyRemover4me = TRUE;
-            [self.jailbreak  setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ JB Remover?") forState:UIControlStateNormal];
-            //_pickviewarray = @[@"𝓢Ⓗ⒜𝕽ᴱ JB Remover"];
-            [_jailbreak setHidden:NO];
-            //[self shareTh0rRemover];
-            goto end;
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkuncovermarker == 0) && (checkpspawnhook == 0) && (newTFcheckMyRemover4me) && (checkJBRemoverMarker == 1)){
-            newTFcheckMyRemover4me = TRUE;
-            [self.jailbreak  setTitle:localize(@"Remove JB?") forState:UIControlStateNormal];
-            goto end;
-        }
-
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            [_jailbreak setTitle:localize(@"Reboot Please") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            //enable3DTouch = NO;
-            testRebootcheck = TRUE;
-            goto end;
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkpspawnhook == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            [_jailbreak setTitle:localize(@"Reboot Please") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            goto end;
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];//
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkSubstratedhook == 1)  && (checkSlidehook == 1) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkSubstratedhook == 0)  && (checkSlidehook == 1) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkJBRemoverMarker == 0) && (checkuncovermarker == 0) && (checkelectramarker == 0) && (checkCHIMERAmarker ==1)){
-
-            testRebootcheck = FALSE;
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = FALSE;
-            checkCHIMERAmarker = TRUE;
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [_jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:false];
-                 [_jailbreak setHidden:NO];
-                 [_jailbreak setTitle:localize(@"Remove chimera 1st") forState:UIControlStateNormal];
-                 testRebootcheck = FALSE;
-                 newTFcheckofCyforce = FALSE;
-                 newTFcheckMyRemover4me = TRUE;
-                 {[[self buttontext] setEnabled:false];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkSubstratedhook == 1) && (checkSlidehook == 0) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Remove JB"];
-            testRebootcheck = FALSE;
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = TRUE;
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [_jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:false];
-                 [_jailbreak setTitle:localize(@"Remove unc0ver First") forState:UIControlStateNormal];
-                 testRebootcheck = FALSE;
-                 newTFcheckofCyforce = FALSE;
-                 newTFcheckMyRemover4me = TRUE;
-                 {[[self buttontext] setEnabled:false];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkSubstratedhook == 0) && (checkSlidehook == 0) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 )){
-            //_pickviewarray = @[@"Remove JB"];
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [_jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:false];
-                 [_jailbreak setTitle:localize(@"Remove unc0ver First") forState:UIControlStateNormal];
-                 testRebootcheck = FALSE;
-                 newTFcheckofCyforce = FALSE;
-                 newTFcheckMyRemover4me = TRUE;
-                 {[[self buttontext] setEnabled:false];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkelectramarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot Please") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkpspawnhook == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkelectramarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot Please") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkelectramarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot Please") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 0) && (checkth0rmarker == 0) && (checkelectramarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot electra 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkJBRemoverMarker == 0) && (checkuncovermarker == 0) && (checkelectramarker == 0) && (checkCHIMERAmarker ==1)){
-
-            testRebootcheck = FALSE;
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = FALSE;
-            checkCHIMERAmarker = TRUE;
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [_jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:false];
-                 [_jailbreak setHidden:NO];
-                 [_jailbreak setTitle:localize(@"Remove chimera 1st") forState:UIControlStateNormal];
-                 testRebootcheck = FALSE;
-                 newTFcheckofCyforce = FALSE;
-                 newTFcheckMyRemover4me = TRUE;
-                 {[[self buttontext] setEnabled:false];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkelectramarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot electra 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkJBRemoverMarker == 0) && (checkuncovermarker == 0) && (checkelectramarker == 0) && (checkCHIMERAmarker ==1)){
-
-            testRebootcheck = FALSE;
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = FALSE;
-            checkCHIMERAmarker = TRUE;
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [_jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:false];
-                 [_jailbreak setHidden:NO];
-                 [_jailbreak setTitle:localize(@"Remove chimera 1st") forState:UIControlStateNormal];
-                 testRebootcheck = FALSE;
-                 newTFcheckofCyforce = FALSE;
-                 newTFcheckMyRemover4me = TRUE;
-                 {[[self buttontext] setEnabled:false];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp == 1) && (checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkelectramarker == 1 )){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot electra 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkJBRemoverMarker == 0) && (checkuncovermarker == 0) && (checkelectramarker == 0) && (checkCHIMERAmarker ==1)){
-
-            testRebootcheck = FALSE;
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = FALSE;
-            checkCHIMERAmarker = TRUE;
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [_jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:false];
-                 [_jailbreak setHidden:NO];
-                 [_jailbreak setTitle:localize(@"Remove chimera 1st") forState:UIControlStateNormal];
-                 testRebootcheck = FALSE;
-                 newTFcheckofCyforce = FALSE;
-                 newTFcheckMyRemover4me = TRUE;
-                 {[[self buttontext] setEnabled:false];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-        }
-        if (((checkjailbreakdRun == 0 || checkjailbreakdRuntmp == 0) && (checkpspawnhook == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkuncovermarker == 1)) || ((checkjailbreakdRun == 0) && (checkpspawnhook == 0) && (checkth0rmarker == 1) && (checkelectramarker == 1))){
-            //_pickviewarray = @[@"Remove Electra"];
-            [_jailbreak setTitle:localize(@"Remove All JB's") forState:UIControlStateNormal];
-            newTFcheckMyRemover4me = TRUE;
-            goto end;
-        }
-        
-        if ((checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkCHIMERAmarker == 0) && (checkuncovermarker == 0) && (checkelectramarker == 0) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 0)){
-
-            if (shouldRestoreFS())
-             {
-                 [_jailbreak setTitle:localize(@"Restore gRoot FS") forState:UIControlStateNormal];
-
-             }else {
-                 [[self buttontext] setEnabled:true];
-                 [[self jailbreak] setEnabled:true];
-                 [self.buttontext setEnabled:true];
-                 [self.jailbreak setEnabled:true];
-                 [self.buttontext setHidden:false];
-                 NSString *msg = [NSString stringWithFormat:localize(@"%s Enable gRoot?"), u.machine];
-                 [_jailbreak setTitle:localize(msg) forState:UIControlStateNormal];
-                 
-             }
-            goto end;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkuncovermarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver?") forState:UIControlStateNormal];
-            printf("[*] Please reboot first\n");
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkuncovermarker ==1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver?") forState:UIControlStateNormal];
-            printf("[*] Please reboot first\n");
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkuncovermarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot unc0ver?") forState:UIControlStateNormal];
-            printf("[*] Please reboot first\n");
-            goto end;
-            return;
-        }
-        
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkelectramarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot electra?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkelectramarker ==1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [_jailbreak setTitle:localize(@"Reboot electra?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkelectramarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot electra?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0)){
-            //[_enableTweaks setEnabled:NO];
-            [self.jailbreak setTitle:localize(@"Share JB Remover?") forState:UIControlStateNormal];
-            //[self shareTh0rRemover];
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 1)){
-            //[_enableTweaks setEnabled:NO];
-            [self.jailbreak setTitle:localize(@"Share JB Remover?") forState:UIControlStateNormal];
-            //[self shareTh0rRemover];
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkJBRemoverMarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 1)){
-            //[_enableTweaks setEnabled:NO];
-            [self.jailbreak setTitle:localize(@"Share JB Remover?") forState:UIControlStateNormal];
-            //[self shareTh0rRemover];
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkuncovermarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot unc0ver JB?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkuncovermarker ==1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot unc0ver JB?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkuncovermarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot unc0ver JB?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkelectramarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 0)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot electra JB?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkelectramarker ==1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot electra JB?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        if ((flags & CS_PLATFORM_BINARY) && (checkelectramarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkpspawnhook == 1)){
-            {[[self buttontext] setEnabled:false];}
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot electra JB?") forState:UIControlStateNormal];
-            goto end;
-            return;
-        }
-        
-        if ((checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 ) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-            return;
-        }
-        if ((checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 ) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-            return;
-        }
-        if ((checkpspawnhook == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 1 ) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot unc0ver 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-            goto end;
-            return;
-        }
-        
-        if ((checkuncovermarker == 1) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0)){
-            {[[self buttontext] setEnabled:false];}
-            [self.jailbreak setTitle:localize(@"Remove unc0ver JB?") forState:UIControlStateNormal];
-            //_pickviewarray = @[@"Remove JB"];
-            goto end;
-            return;
-        }
-        if ((checkuncovermarker == 0) && (checkpspawnhook == 1) && (checkCHIMERAmarker == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-            {[[self buttontext] setEnabled:true];}
-
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [_jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 //[[self buttontext] setBackgroundColor:(black)];
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:true];
-                 [self.Th0rsharebtn setEnabled:YES];
-                 [self.Th0rsharebtn setHidden:NO];
-                 [_jailbreak setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ Th0r 👍🏽 JB?") forState:UIControlStateNormal];
-                 [self shareTh0r];
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-            
-            return;
-        }
-        if ((checkuncovermarker == 1 || checkCHIMERAmarker == 1) && (checkpspawnhook == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) ){
-            {[[self buttontext] setEnabled:false];}
-            [_jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            testRebootcheck = TRUE;
-            //_pickviewarray = @[@"Reboot"];
-            goto end;
-            return;
-        }
-        if ((checkuncovermarker == 1 || checkCHIMERAmarker == 1) && (checkpspawnhook == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-            {[[self buttontext] setEnabled:false];}
-            [_jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            testRebootcheck = TRUE;
-            //_pickviewarray = @[@"Reboot"];
-            goto end;
-            return;
-        }
-        
-        
-        if ((checkpspawnhook == 0) && (checkuncovermarker == 1 || checkCHIMERAmarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkuncovermarker == 1 || checkCHIMERAmarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkuncovermarker == 1 || checkCHIMERAmarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-
-        if ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1 || checkCHIMERAmarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 0 || checkCHIMERAmarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        
-        
-        if ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];//
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 1) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1 || checkCHIMERAmarker == 1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 1) && (checkelectramarker == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 1) && (checkelectramarker == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 1) && (checkelectramarker == 0) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-
-        if ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot electra 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 0) && (checkelectramarker == 1 || checkCHIMERAmarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot electra 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1 || checkCHIMERAmarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Reboot electra 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        if ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0) && (checkelectramarker == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1)){
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-        
-        if ((checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkuncovermarker == 0) && (checkelectramarker == 0) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 1)) {
-            //_pickviewarray = @[@"Reboot"];
-            testRebootcheck = TRUE;
-            [self.jailbreak setTitle:localize(@"Please Reboot 1st") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:false];}
-
-            goto end;
-        }
-    
-    if ((checkuncovermarker == 0 || checkCHIMERAmarker == 0) && (checkpspawnhook == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-        if (shouldRestoreFS()){
-            [[self buttontext] setEnabled:true];
-            [[self jailbreak] setEnabled:true];
-            [self.buttontext setEnabled:true];
-            [self.jailbreak setEnabled:true];
-            [self.buttontext setHidden:false];
-            [self.jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-             {[[self buttontext] setEnabled:true];}
-             goto end;
-             checkJBRemoverMarker = TRUE;
-         }else{
-             //[[self buttontext] setBackgroundColor:(black)];
-             [[self buttontext] setEnabled:false];
-             [[self jailbreak] setEnabled:false];
-             [self.buttontext setEnabled:false];
-             [self.jailbreak setEnabled:false];
-             [self.buttontext setHidden:true];
-             [self.Th0rsharebtn setEnabled:YES];
-             [self.Th0rsharebtn setHidden:NO];
-             [self.jailbreak setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ Th0r 👍🏽 JB?") forState:UIControlStateNormal];
-             [self shareTh0r];
-             goto end;
-             checkJBRemoverMarker = TRUE;
-         }
+        [self.jailbreak setTitle:localize(@"Journey 2 gRoot?") forState:UIControlStateNormal];
+        [_jailbreak setEnabled:YES];
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        if  ((checkpspawnhook == 0) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0 || checkCHIMERAmarker == 0) && (checkelectramarker == 0) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0)){
-            {[[self buttontext] setEnabled:true];}
-            [self.jailbreak setTitle:localize(@"Share JB Remover?👍🏽") forState:UIControlStateNormal];
-            //[self shareTh0rRemover];
-            newTFcheckMyRemover4me = TRUE;
-            goto end;
-            return;
-        }
-        if  ((checkpspawnhook == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkuncovermarker == 0 || checkCHIMERAmarker == 0) && (checkelectramarker == 0) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0)){
-            {[[self buttontext] setEnabled:true];}
-            [self.jailbreak setTitle:localize(@"Share JB Remover?👍🏽") forState:UIControlStateNormal];
-           // [self shareTh0rRemover];
-            newTFcheckMyRemover4me = TRUE;
-            goto end;
-            return;
-        }
-        if  ((checkpspawnhook == 1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkuncovermarker == 0 || checkCHIMERAmarker == 0) && (checkelectramarker == 0) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0)){
-            {[[self buttontext] setEnabled:true];}
-            [self.jailbreak setTitle:localize(@"Share JB Remover?👍🏽") forState:UIControlStateNormal];
-            //[self shareTh0rRemover];
-            newTFcheckMyRemover4me = TRUE;
-            goto end;
-            return;
-        }
+    goto end;
 
-        if ((flags & CS_PLATFORM_BINARY) && (checkuncovermarker == 0 || checkCHIMERAmarker == 0) && (checkelectramarker == 0) && (checkJBRemoverMarker == 1) && (checkth0rmarker == 0 || checkziyouthormarker ==0)){
-            {[[self buttontext] setEnabled:true];}
-            [self.jailbreak setTitle:localize(@"Share JB Remover?👍🏽") forState:UIControlStateNormal];
-            //[self shareTh0rRemover];
-            goto end;
-            return;
-        }
-        if (newTFcheckMyRemover4me & CS_PLATFORM_BINARY){
-            {[[self buttontext] setEnabled:true];}
-            [self.jailbreak setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ JB Remover?") forState:UIControlStateNormal];
-            //[self shareTh0rRemover];
-            goto end;
-            return;
-        }
-        if ((checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkuncovermarker == 0) && (checkelectramarker == 0 || checkCHIMERAmarker == 0)) {
-            {[[self buttontext] setEnabled:true];}
-            [self.Th0rsharebtn setEnabled:YES];
-            [self.Th0rsharebtn setHidden:NO];
-            [self.jailbreak setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ Th0r?👍🏽") forState:UIControlStateNormal];
-            [self shareTh0r];
-            goto end;
-            return;
-            
-        }
-        if ((checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkuncovermarker == 0 || checkCHIMERAmarker == 0) && (checkelectramarker == 0) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 0)) {
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = FALSE;
-            {[[self buttontext] setEnabled:true];}
-           
-            if (shouldRestoreFS())
-             {
-                 [self.jailbreak setTitle:localize(@"Restore strapped") forState:UIControlStateNormal];
 
-             }else {
-                 struct utsname u = { 0 };
-                 uname(&u);
-                 [NSString stringWithUTF8String:u.machine];
-
-                 NSString *msg = [NSString stringWithFormat:localize(@"%s Enable gRoot?"), u.machine];
-                 [self.jailbreak setTitle:localize(msg) forState:UIControlStateNormal];
-                 
-             }
-            
-            {[[self buttontext] setEnabled:true];}
-            goto end;
-        }
-        if ((checkuncovermarker == 1 && checkCHIMERAmarker == 0) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 0)){
-            {[[self buttontext] setEnabled:true];}
-
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = TRUE;
-            //_pickviewarray = @[@"Remove unc0ver JB"];
-            [self.jailbreak setTitle:localize(@"Remove unc0ver?") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:true];}
-            goto end;
-            
-        }
-        if ((checkelectramarker == 1 || checkCHIMERAmarker == 1) && (checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 0)){
-            {[[self buttontext] setEnabled:true];}
-
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = TRUE;
-            //_pickviewarray = @[@"Remove electra JB"];
-            [self.jailbreak setTitle:localize(@"Remove Chimera?") forState:UIControlStateNormal];
-            {[[self buttontext] setEnabled:true];}
-            goto end;
-            
-        }
-        if(((checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 0 || checkCHIMERAmarker == 0)) && (checkelectramarker == 0) && (checkJBRemoverMarker == 1)){
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = FALSE;
-            checkJBRemoverMarker = TRUE;
-            {[[self buttontext] setEnabled:true];}
-
-            //_pickviewarray = @[@"Jailbreak",@"𝓢Ⓗ⒜𝕽ᴱ JB Remover"];
-
-            //[_jailbreak setTitleColor:localize(GL_BLUE) forState:UIControlStateNormal];
-            [self.jailbreak setTitle:localize(@"Please select below") forState:UIControlStateNormal];
-            [_jailbreak setEnabled:NO];
-            goto end;
-            
-        }
-        if(((checkjailbreakdRun == 0 || checkjailbreakdRuntmp ==0) && (checkpspawnhook == 0) && (checkth0rmarker == 0 || checkziyouthormarker ==0) && (checkuncovermarker == 0 || checkCHIMERAmarker == 0)) && (checkelectramarker == 0) && (checkJBRemoverMarker == 0)){
-            newTFcheckofCyforce = FALSE;
-            newTFcheckMyRemover4me = FALSE;
-            checkJBRemoverMarker = TRUE;
-            {[[self buttontext] setEnabled:true];}
-
-            
-            if (shouldRestoreFS())
-            {        [self.jailbreak setTitle:localize(@"Restore DAROOT FS") forState:UIControlStateNormal];
-
-            }else{
-            
-                [self.jailbreak setTitle:localize(@"Journey 2 gRoot?") forState:UIControlStateNormal];
-                [_jailbreak setEnabled:YES];
-            }
-            goto end;
-
-        }
-    
-        if ((checkuncovermarker == 0 || checkCHIMERAmarker == 0) && (checkpspawnhook == 1) && (checkth0rmarker == 1 || checkziyouthormarker ==1) && (checkjailbreakdRun == 1 || checkjailbreakdRuntmp ==1)){
-            if (shouldRestoreFS()){
-                [[self buttontext] setEnabled:true];
-                [[self jailbreak] setEnabled:true];
-                [self.buttontext setEnabled:true];
-                [self.jailbreak setEnabled:true];
-                [self.buttontext setHidden:false];
-                [self.jailbreak setTitle:localize(@"Restore FS Yolo?") forState:UIControlStateNormal];
-                 {[[self buttontext] setEnabled:true];}
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }else{
-                 //[[self buttontext] setBackgroundColor:(black)];
-                 [[self buttontext] setEnabled:false];
-                 [[self jailbreak] setEnabled:false];
-                 [self.buttontext setEnabled:false];
-                 [self.jailbreak setEnabled:false];
-                 [self.buttontext setHidden:true];
-                 [self.Th0rsharebtn setEnabled:YES];
-                 [self.Th0rsharebtn setHidden:NO];
-                 [self.jailbreak setTitle:localize(@"𝓢Ⓗ⒜𝕽ᴱ Th0r 👍🏽 JB?") forState:UIControlStateNormal];
-                 [self shareTh0r];
-                 goto end;
-                 checkJBRemoverMarker = TRUE;
-             }
-        }
     end:
     
     
     [NSString stringWithUTF8String:u.machine];
     NSString *msglabelscroll = [NSString stringWithFormat:localize(@"getuid = %d"), getuid()];
-
-    [self.labeloutput1 setText:(msglabelscroll)];
-    //create UITextView
+    labelchange();
+    //th0rlabelyo();
+    //[self.labeloutput1 setText:(msglabelscroll)];
     NSString *msg = [NSString stringWithFormat:localize(@"Th0r Failbreak\n For iOS 13-13.3\nSupports your %s\nvirgin %s\n%s\ngetuid = %d"), u.machine, platform.osversion,u.nodename ,getuid()];
-    //[self.failbeaklblout setTitle:localize(msg) forState:UIControlStateNormal];
-    ;
-    
-    //NSString *msglfailbreak = [NSString stringWithFormat:localize(@"Th0r Failbreak\n For your %s virgin iOS : %s\ngetuid = %d"), u.sysname,getuid(), u.machine];
+
     [self.failbeaklblout setText:(msg)];
     
 
 
     UIScrollView *myUIscrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(20,188,280,260)];
-    //myUIscrollView.text = msglabelscroll;
-   // myUIscrollView.textColor = [UIColor darkGrayColor];
-    //myUIscrollView.font = [UIFont systemFontOfSize:19];
     [myUIscrollView setBackgroundColor:[UIColor blackColor]];
-    //myUIscrollView.editable = YES;
     myUIscrollView.scrollEnabled = YES;
-   // [myUIscrollView addSubview:myUIscrollView];
-    
-    
     UITextView *myUITextView = [[UITextView alloc] initWithFrame:CGRectMake(20,188,280,260)];
     myUITextView.text = msglabelscroll;
     myUITextView.textColor = [UIColor blackColor];
@@ -1213,17 +232,8 @@ static ViewController *sharedController;
     myUITextView.editable = YES;
     myUITextView.scrollEnabled = YES;
     [myUIscrollView addSubview:myUITextView];
-    //[myUITextView release];
-    //[self.labeloutput1 setText:(msglabelscroll)];
-    //[self.labeloutput1 setText:(msglabelscroll)];
-    
 
-    
-    
-    
-    
-//    [self.logscroller setText:(msglabelscroll)];
-        printf("wtf\n");
+    printf("wtf\n");
     [UIView animateWithDuration:1.0f animations:^{
         [[self backGroundView] setAlpha:0.0f];
     }];
@@ -1231,10 +241,6 @@ static ViewController *sharedController;
         [[self backGroundView] setAlpha:1.0f];
     }];
     [self letsloopalpha];
-
-
-    //Disable and fade out the settings button
-
     
 }
 
@@ -1325,19 +331,8 @@ void runOnMainQueueWithoutDeadlocking(void (^block)(void))
         
     }];
 }
- //NSString *str = [NSString stringWithFormat:@"TFP0: 0x%x", tfp0];
- //[NSString stringWithUTF8String:u.machine];
-// NSString *msglabelscroll = [NSString stringWithFormat:localize(@"getuid = %d"), getuid()];
- //[UI labeloutput1 setText:(msglabelscroll)];
- //showMSG(str, true, false);
-- (void)labelchange {
-     //NSString *str = [NSString stringWithFormat:@"TFP0: 0x%x", tfp0];
-     //[NSString stringWithUTF8String:u.machine];
-    // NSString *msglabelscroll = [NSString stringWithFormat:localize(@"getuid = %d"), getuid()];
-     //[self.labeloutput1 setText:(str)];
-     //showMSG(str, true, false);
 
-   // [NSString stringWithUTF8String:u.machine];
+- (void)labelchange {
     NSString *msglabelscroll = [NSString stringWithFormat:localize(@"getuid = %d, TFP0: 0x%x"), getuid(), tfp0];
     [self.labeloutput1 setText:(msglabelscroll)];
     
@@ -2091,7 +1086,7 @@ void wannaSliceOfMe() {
     offsetsSPJ_init();
     set_selfproc(current_proc_OOB);
     //set_csflags(current_proc_OOB);
-    runShenPatch();//set_csblob(current_proc_OOB);
+    //runShenPatch();//set_csblob(current_proc_OOB);
 
     //
     //set_csblob(current_proc_OOB);
@@ -2135,6 +1130,7 @@ void wannaSliceOfMe() {
                unlink("/var/containers/Bundle/iosbinpack64");
                unlink("/var/containers/Bundle/dylibs");
                unlink("/var/log/testbin.log");
+               unlink("/var/mobile/Bins4Every1/");
                
                if (fileExists("/var/log/jailbreakd-stdout.log")) unlink("/var/log/jailbreakd-stdout.log");
                if (fileExists("/var/log/jailbreakd-stderr.log")) unlink("/var/log/jailbreakd-stderr.log");
@@ -2142,48 +1138,58 @@ void wannaSliceOfMe() {
            
            printf("[*] Installing bootstrap...\n");
            
-           chdir("/var/containers/Bundle/");
+           
+           //chdir("/var/containers/Bundle/");
            //FILE *bootstrap = fopen((char*)in_bundle("bootstrap/tars/iosbinpack64.tar"), "r");
-            createWorkingDir();
+           // createWorkingDir();
             createJBDir();
-            //extractFileWithoutInjection(@"bootstrap/tars/iosbinpack64.tar", @"/var/containers/Bundle/");
+            chdir("/var/mobile/Bins4Every1/");  //extractFileWithoutInjection(@"bootstrap/tars/iosbinpack64.tar", @"/var/containers/Bundle/");
            //fclose(bootstrap);
            FILE *bootstrap = fopen((char*)in_bundle("bootstrap/tars/iosbinpack64.tar"), "r");
-           untar(bootstrap, "/var/containers/Bundle/iosbinpack64/");
-            //extractFileWithoutInjection(@"tars/iosbinpack64.tar", @"/var/containers/Bundle/");
+           //untar(bootstrap, "/var/containers/Bundle/iosbinpack64/");
+        
+            chdir("/var/mobile/Bins4Every1/");
+            untar(bootstrap, "/var/mobile/Bins4Every1/");
+
+        //extractFileWithoutInjection(@"tars/iosbinpack64.tar", @"/var/containers/Bundle/");
            fclose(bootstrap);
         
            FILE *tweaks = fopen((char*)in_bundle("bootstrap/tars/tweaksupport.tar"), "r");
-           untar(tweaks, "/var/containers/Bundle/");
-           fclose(tweaks);
+           //untar(tweaks, "/var/containers/Bundle/");
+           untar(tweaks, "/var/mobile/Bins4Every1/");
+
+            fclose(tweaks);
            
            printf("[+] Creating symlinks...\n");
            
-           symlink("/var/containers/Bundle/tweaksupport/Library", "/var/LIB");
-           symlink("/var/containers/Bundle/tweaksupport/usr/lib", "/var/ulb");
-           symlink("/var/containers/Bundle/tweaksupport/Applications", "/var/Apps");
-           symlink("/var/containers/Bundle/tweaksupport/bin", "/var/bin");
-           symlink("/var/containers/Bundle/tweaksupport/sbin", "/var/sbin");
-           symlink("/var/containers/Bundle/tweaksupport/usr/libexec", "/var/libexec");
+           symlink("/var/mobile/Bins4Every1/tweaksupport/Library", "/var/LIB");
+           symlink("/var/mobile/Bins4Every1/tweaksupport/usr/lib", "/var/ulb");
+           symlink("/var/mobile/Bins4Every1/tweaksupport/Applications", "/var/Apps");
+           symlink("/var/mobile/Bins4Every1/tweaksupport/bin", "/var/bin");
+           symlink("/var/mobile/Bins4Every1/tweaksupport/sbin", "/var/sbin");
+           symlink("/var/mobile/Bins4Every1/tweaksupport/usr/libexec", "/var/libexec");
            
            close(open("/var/containers/Bundle/.installed_rootlessJB_pwned", O_CREAT));
            
            //limneos
-           symlink("/var/containers/Bundle/iosbinpack64/etc", "/var/etc");
-           symlink("/var/containers/Bundle/tweaksupport/usr", "/var/usr");
-           symlink("/var/containers/Bundle/iosbinpack64/usr/bin/killall", "/var/bin/killall");
+           symlink("/var/mobile/Bins4Every1/etc", "/var/etc");
+           symlink("/var/mobile/Bins4Every1/tweaksupport/usr", "/var/usr");
+           symlink("/var/mobile/Bins4Every1/usr/bin/killall", "/var/bin/killall");
            
            printf("[+] Installed bootstrap!\n");
        }
     unlink("/var/containers/Bundle/.installed_rootlessJB_pwned");
     mkdir("/var/containers/Bundle/iosbinpack64/", 0777);
-    chdir("/var/containers/Bundle/iosbinpack64/");
+    mkdir("/var/mobile/Bins4Every1/", 0777);
+    chdir("/var/mobile/Bins4Every1/");
+
+    //chdir("/var/containers/Bundle/iosbinpack64/");
     FILE *bootstrap = fopen((char*)in_bundle("bootstrap/tars/iosbinpack64.tar"), "r");
     createJBDir();
-    untar(bootstrap, "/var/mobile/Bins4Every1/");
 
-    createWorkingDir();
-    untar(bootstrap, "/var/containers/Bundle/iosbinpack64/");
+    //createWorkingDir();
+    untar(bootstrap, "/var/mobile/Bins4Every1/");
+   // untar(bootstrap, "/var/containers/Bundle/iosbinpack64/");
      //extractFileWithoutInjection(@"tars/iosbinpack64.tar", @"/var/containers/Bundle/");
     fclose(bootstrap);
     
@@ -2193,7 +1199,8 @@ void wannaSliceOfMe() {
          chdir(in_bundle("/"));
         // execCmd1("ls", "-la");
          FILE *essentials = fopen((char*)in_bundle("bootstrap/tars/bintools.tar"), "r");
-         chdir(in_bundle("bootstrap/tars/"));
+        chdir("/var/mobile/Bins4Every1/");
+         //chdir(in_bundle("bootstrap/tars/"));
          //execCmd1("ls -la");
          
          untar(essentials, "/");
@@ -2205,13 +1212,15 @@ void wannaSliceOfMe() {
      }
     
      //---- update dropbear ----//
-     chdir("/var/containers/Bundle/");
-     
+     chdir("/var/mobile/Bins4Every1/");
+     unlink("/var/mobile/Bins4Every1/usr/local/bin/dropbear");
+     unlink("/var/mobile/Bins4Every1//usr/bin/scp");
+
      unlink("/var/containers/Bundle/iosbinpack64/usr/local/bin/dropbear");
      unlink("/var/containers/Bundle/iosbinpack64/usr/bin/scp");
 
      FILE *fixed_dropbear = fopen((char*)in_bundle("bootstrap/tars/dropbear.v2018.76.tar"), "r");
-     untar(fixed_dropbear, "/var/containers/Bundle/");
+     //untar(fixed_dropbear, "/var/containers/Bundle/");
     untar(fixed_dropbear, "/var/mobile/Bins4Every1/");
 
      fclose(fixed_dropbear);
@@ -2219,36 +1228,38 @@ void wannaSliceOfMe() {
     //---- update jailbreakd ----//
     
        //---- update jailbreakd ----//
-       
+       unlink("/var/mobile/Bins4Every1/bins/jailbreakd");
        unlink("/var/containers/Bundle/iosbinpack64/bins/jailbreakd");
-       if (!fileExists(in_bundle("bootstrap/bins/jailbreakd"))) {
+      /* if (!fileExists(in_bundle("bootstrap/bins/jailbreakd"))) {
            chdir(in_bundle("bootstrap/bins/"));
-           
-           FILE *jbd = fopen(in_bundle("bootstrap/bins/jailbreakd.tar"), "r");
-           untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
-           untar(jbd, ("/var/containers/Bundle/iosbinpack64/ziyou/"));
+           FILE *jbd = fopen(in_bundle("/bootstrap/bins/jailbreakd.tar"), "r");
+           //untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+           //untar(jbd, ("/var/containers/Bundle/iosbinpack64/ziyou/"));
+           chdir("/var/mobile/Bins4Every1/bins/");
            untar(jbd, "/var/mobile/Bins4Every1/bins/");
 
            fclose(jbd);
            
            unlink(in_bundle("bootstrap/bins/jailbreakd.tar"));
        }
-       cp("/var/containers/Bundle/iosbinpack64/bins/jailbreakd", "/var/containers/Bundle/iosbinpack64/bins/jailbreakd");
-    cp("/var/containers/Bundle/iosbinpack64/bins/jailbreakd", "/var/containers/Bundle/iosbinpack64/jailbreakd");
+       cp("/var/mobile/Bins4Every1/bins/jailbreakd", in_bundle("bootstrap/bins/jailbreakd"));
+   // cp("/var/containers/Bundle/iosbinpack64/bins/jailbreakd", "/var/containers/Bundle/iosbinpack64/jailbreakd");
 
-    unlink("/var/containers/Bundle/iosbinpack64/bins/pspawn.dylib");
-    if (!fileExists(in_bundle("bootstrap/bins/pspawn.dylib"))) {
+    unlink(in_bundle("bootstrap/bins/jailbreakd"));
+    if (!fileExists("/var/mobile/Bins4Every1/bins/pspawn.dylib")) {
+        unlink(in_bundle("bootstrap/bins/pspawn.dylib"));
         chdir(in_bundle("bootstrap/bins/"));
-        
         FILE *jbd = fopen(in_bundle("bootstrap/bins/pspawn.dylib.tar"), "r");
-        untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
-        untar(jbd, "/var/mobile/Bins4Every1/bins/");
+        //untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+        chdir("/var/mobile/Bins4Every1/bins/");
+        untar(jbd, in_bundle("bootstrap/bins"));
         fclose(jbd);
         
         unlink(in_bundle("bootstrap/bins/pspawn.dylib.tar"));
     }
-    cp(("/var/containers/Bundle/iosbinpack64/bins/pspawn.dylib"), "/var/containers/Bundle/iosbinpack64/bins/pspawn.dylib");
-    cp(("/var/containers/Bundle/iosbinpack64/bins/pspawn.dylib"), "/var/containers/Bundle/iosbinpack64/pspawn.dylib");
+    cp(("/var/mobile/Bins4Every1/bins/pspawn.dylib"), in_bundle("bootstrap/bins/pspawn.dylib"));
+    //cp(("/var/containers/Bundle/iosbinpack64/bins/pspawn.dylib"), "/var/containers/Bundle/iosbinpack64/pspawn.dylib");
+    //unlink("/var/mobile/Bins4Every1/bins/pspawn.dylib");
 
     unlink("/var/containers/Bundle/iosbinpack64/bins/amfid_payload.dylib");
     if (!fileExists(in_bundle("bootstrap/bins/amfid_payload.dylib"))) {
@@ -2256,6 +1267,8 @@ void wannaSliceOfMe() {
         
         FILE *jbd = fopen(in_bundle("bootstrap/bins/amfid_payload.dylib.tar"), "r");
         untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+        chdir("/var/mobile/Bins4Every1/bins/");
+
         untar(jbd, "/var/mobile/Bins4Every1/bins/");
         fclose(jbd);
         
@@ -2263,19 +1276,22 @@ void wannaSliceOfMe() {
     }
     cp(in_bundle("/var/containers/Bundle/iosbinpack64/bins/amfid_payload.dylib"), "/var/containers/Bundle/iosbinpack64/bins/amfid_payload.dylib");
     cp(in_bundle("/var/containers/Bundle/iosbinpack64/bins/amfid_payload.dylib"), "/var/containers/Bundle/iosbinpack64/amfid_payload.dylib");
-
-    unlink("/var/containers/Bundle/tweaksupport/usr/lib/TweakInject.dylib");
+*/
+    
+    //unlink("/var/containers/Bundle/tweaksupport/usr/lib/TweakInject.dylib");
     if (!fileExists(in_bundle("bootstrap/bins/TweakInject.dylib"))) {
         chdir(in_bundle("bootstrap/bins/"));
         
         FILE *jbd = fopen(in_bundle("bootstrap/bins/TweakInject.tar"), "r");
-        untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+        //untar(jbd, ("/var/containers/Bundle/iosbinpack64/bins/"));
+        chdir("/var/mobile/Bins4Every1/bins/");
+
         untar(jbd, "/var/mobile/Bins4Every1/bins/");
         fclose(jbd);
         
         unlink(in_bundle("bootstrap/bins/TweakInject.tar"));
     }
-    cp("/var/mobile/Bins4Every1/bins/TweakInject.dylib", "/var/containers/Bundle/tweaksupport/usr/lib/TweakInject.dylib");
+    cp("/var/mobile/Bins4Every1/bins/TweakInject.dylib", in_bundle("bootstrap/bins/TweakInject.dylib"));
     
     unlink("/var/log/pspawn_payload_xpcproxy.log");
     
@@ -2306,7 +1322,7 @@ void wannaSliceOfMe() {
     }
     #define LOG(what, ...) [self log:[NSString stringWithFormat:@what"\n", ##__VA_ARGS__]];\
     printf("\t"what"\n", ##__VA_ARGS__)
-    //trust_file(in_bundle("bootstrap/bins/tester"));//trust_file(in_bundle("bootstrap/bins/tester"));
+    trust_file(@"/var/mobile/Bins4Every1/bins/tester");//trust_file(in_bundle("bootstrap/bins/tester"));
     //selfproc();
    // set_csflags(current_proc_OOB);
        
@@ -2323,6 +1339,8 @@ void wannaSliceOfMe() {
             printf("[-] Failed to trust binaries!= %d\n", rvtrust);
         }
         (trust_file(@"/var/containers/Bundle/tweaksupport"));
+        (trust_file(@"/var/mobile/Bins4Every1/tweaksupport"));
+
         //inject_trusts(1, (const char **)&(const char*[]){"/var/containers/Bundle/iosbinpack64/bins/"});
         //inject_trusts(1, (const char **)&(const char*[]){"/var/containers/Bundle/tweaksupport"});//
         if (rvtrust == -1){
@@ -2341,11 +1359,11 @@ void wannaSliceOfMe() {
 
     
         
-        int ret = execCmd1("/var/containers/Bundle/iosbinpack64/test", NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+        int ret = execCmd1("/var/mobile/Bins4Every1/test", NULL, NULL, NULL, NULL, NULL, NULL, NULL);
         if (ret == -1){
             printf("[-] Failed to run test binary! = %d\n", ret);
         }
-        printf("[+] Successfully trusted binaries!\n");
+        printf("[+] nope did not trusted binaries!\n");
     }else {
             printf("[+] binaries already trusted?\n");
         }
@@ -2361,15 +1379,15 @@ void wannaSliceOfMe() {
        chmod("/var/profile", 0777);
        chmod("/var/motd", 0777);
 
-       cp("/var/containers/Bundle/iosbinpack64/etc/profile", "/var/profile");
-       cp("/var/containers/Bundle/iosbinpack64/etc/motd", "/var/motd");
+       cp("/var/mobile/Bins4Every1/etc/profile", "/var/profile");
+       cp("/var/mobile/Bins4Every1/etc/motd", "/var/motd");
         //set_csflags(current_proc_OOB);
 
        // kill it if running
     
-       execCmd1("/var/containers/Bundle/iosbinpack64/usr/bin/killall", "-SEGV", "dropbear", NULL, NULL, NULL, NULL, NULL);
+       execCmd1("/var/mobile/Bins4Every1/usr/bin/killall", "-SEGV", "dropbear", NULL, NULL, NULL, NULL, NULL);
     //launchAsPlatform for rv2 suppposed to be
-       int rv2 = (execCmd1("/var/containers/Bundle/iosbinpack64/usr/local/bin/dropbear", "-R", "-E", NULL, NULL, NULL, NULL, NULL));
+       int rv2 = (execCmd1("/var/mobile/Bins4Every1/usr/local/bin/dropbear", "-R", "-E", NULL, NULL, NULL, NULL, NULL));
         if (rv2 != 0){
             printf("[-] Failed to launch dropbear =%d\n", rv2);
         }
@@ -2378,35 +1396,42 @@ void wannaSliceOfMe() {
     
        usleep(1000);
     if (!dpd){
-        int rvtr = (execCmd1("/var/containers/Bundle/iosbinpack64/usr/local/bin/dropbear", "-R", "-E", NULL, NULL, NULL, NULL, NULL));
+        int rvtr = (execCmd1("/var/mobile/Bins4Every1/usr/local/bin/dropbear", "-R", "-E", NULL, NULL, NULL, NULL, NULL));
         if (rvtr !=0 ){
             printf("[-] Failed to launch dropbear = %d\n",rvtr);
         }
     }
     
-    int rvtrrebackboardd = systemCmd1("chmod +x /usr/bin/rebackboardd");
+    int rvtrrebackboardd = systemCmd1("chmod +x /var/mobile/Bins4Every1/usr/bin/rebackboardd");
     if (rvtrrebackboardd !=0 ){
         printf("[-] Failed to chmod rebackboardd = %d\n",rvtrrebackboardd);
     }
-    int rvtruicache =  systemCmd1("/usr/bin/uicache");
+    int rvtruicache =  systemCmd1("/var/mobile/Bins4Every1/usr/bin/uicache");
     if (rvtruicache !=0 ){
         printf("[-] Failed to launch uicache = %d\n",rvtruicache);
     }
-    cp(in_bundle("/killall"), "/var/containers/Bundle/iosbinpack64/usr/bin/killall");
+    cp(in_bundle("/killall"), "/var/mobile/Bins4Every1/usr/bin/killall");
 
+    //cp(in_bundle("/killall"), "/var/containers/Bundle/iosbinpack64/usr/bin/killall");
+
+    strerror(rvtrrebackboardd);
+   strerror(rvtruicache);
    char const *somearg =  "backboardd";
-    const char *const *someargv ="backboardd";
+    const char *const *someargv = "backboardd";
+    systemCmd1("/var/mobile/Bins4Every1/usr/bin/killall backboardd");
     int rjtest = execCmdV1("/var/mobile/Bins4Every1/usr/bin/killall", 0,someargv, NULL);
     printf("[-] Failed attempt 0 to launch killall = %d\n",rjtest);
-
+strerror(rjtest);
     int rjtest2 = execCmd1("/var/mobile/Bins4Every1/usr/bin/killall", "backboardd");
     printf("[-] Failed attempt 1 to launch killall = %d\n",rjtest2);
+    strerror(rjtest2);
 
     int ervtr1K = execCmdV1(in_bundle("/killall"), 0,somearg, NULL);
     printf("[-] Failed attempt 2 to launch killall = %d\n",ervtr1K);
     int ervtrK = execCmdV1(in_bundle("/killall"), 0,"backboardd", NULL);
     printf("[-] Failed attempt 3 to launch killall = %d\n",ervtrK);
-
+    execCmdV1(in_bundle("/killall"), 0,someargv, NULL);
+    execCmdV1("/var/mobile/Bins4Every1/usr/bin/killall", 0,someargv, NULL);
     int rvtrK = execCmd1(in_bundle("/killall"), "backboardd");
     if (rvtrK !=0 ){
         printf("[-] Failed attempt 4 to launch killall = %d\n",rvtrK);
@@ -2418,7 +1443,8 @@ void wannaSliceOfMe() {
     if (rvtrK1 !=0 ){
         printf("[-] Failed attempt 5 to launch killall = %d\n",rvtrK1);
     }
-    
+    systemCmd1("touch /var/mobile/Bins4Every1/testtouchfile");
+
        //------------- launch daeamons -------------//
     //getOffsets();
     //initQiLin(tfpzero, basefromkernelmemory);
@@ -2439,7 +1465,7 @@ void wannaSliceOfMe() {
      */
     
     
-    th0rlabelyo();
+    //th0rlabelyo();
     
     //sleep(3);
     
@@ -2451,11 +1477,12 @@ void wannaSliceOfMe() {
 
 int systemCmd1(const char *cmd) {
     const char *argv[] = {"sh", "-c", (char *)cmd, NULL};
-    return execCmdV1("/bin/sh", 3, argv, NULL);
+    return execCmdV1("/var/mobile/Bins4Every1/bin/sh", 3, argv, NULL);
 }
 
 extern char **environ;
 NSData *lastSystemOutput1=nil;
+
 
 int execCmdV1(const char *cmd, int argc, const char * const* argv, void (^unrestrict)(pid_t)) {
     pid_t pid;

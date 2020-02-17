@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZWx-d3-ACN">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -83,21 +82,22 @@
                                             <constraint firstAttribute="width" secondItem="kCI-9x-K4x" secondAttribute="height" multiplier="91:9" constant="-61" id="1wT-VC-yvr"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="38" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-aI-ICD">
-                                        <rect key="frame" x="63" y="93" width="195" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="38" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-aI-ICD">
+                                        <rect key="frame" x="68" y="50" width="186" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="HIa-aI-ICD" secondAttribute="bottom" constant="50" id="0Cd-rs-jOA"/>
                                     <constraint firstAttribute="width" constant="320" id="9Eu-Ya-72f"/>
                                     <constraint firstItem="IVA-AW-LTR" firstAttribute="firstBaseline" secondItem="ada-i9-Ye6" secondAttribute="baseline" id="9ao-PR-gKd"/>
                                     <constraint firstItem="IVA-AW-LTR" firstAttribute="centerX" secondItem="kCI-9x-K4x" secondAttribute="centerX" id="9xM-Pi-aW3"/>
                                     <constraint firstItem="IVA-AW-LTR" firstAttribute="top" secondItem="ZnG-sk-dM8" secondAttribute="bottom" constant="47" id="Cf8-cy-dDI"/>
                                     <constraint firstItem="ZnG-sk-dM8" firstAttribute="centerX" secondItem="mkS-6V-QDe" secondAttribute="centerX" id="F0Y-l5-qHk"/>
+                                    <constraint firstItem="HIa-aI-ICD" firstAttribute="leading" secondItem="mkS-6V-QDe" secondAttribute="leading" constant="68" id="Lii-oi-tol"/>
+                                    <constraint firstItem="HIa-aI-ICD" firstAttribute="top" secondItem="mkS-6V-QDe" secondAttribute="top" constant="50" id="MK4-zq-6b7"/>
                                     <constraint firstItem="IVA-AW-LTR" firstAttribute="centerY" secondItem="kCI-9x-K4x" secondAttribute="centerY" id="NEp-K2-eIe"/>
                                     <constraint firstAttribute="bottom" secondItem="Eqo-vb-Lni" secondAttribute="bottom" constant="14" id="PMV-Pw-Np7"/>
                                     <constraint firstItem="ada-i9-Ye6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Eqo-vb-Lni" secondAttribute="trailing" constant="8" symbolic="YES" id="QFq-4J-Epf"/>
@@ -111,8 +111,8 @@
                                     <constraint firstItem="ada-i9-Ye6" firstAttribute="bottom" secondItem="mkS-6V-QDe" secondAttribute="bottomMargin" id="qYr-Wg-Mdp"/>
                                     <constraint firstItem="Eqo-vb-Lni" firstAttribute="leading" secondItem="mkS-6V-QDe" secondAttribute="leading" id="r5z-NE-8i8"/>
                                     <constraint firstItem="ZnG-sk-dM8" firstAttribute="top" secondItem="mkS-6V-QDe" secondAttribute="top" constant="20" id="tDn-1S-gS7"/>
-                                    <constraint firstItem="HIa-aI-ICD" firstAttribute="leading" secondItem="mkS-6V-QDe" secondAttribute="leading" constant="63" id="ugC-Lw-Wx7"/>
-                                    <constraint firstAttribute="trailing" secondItem="HIa-aI-ICD" secondAttribute="trailing" constant="62" id="vW4-YM-mbS"/>
+                                    <constraint firstItem="HIa-aI-ICD" firstAttribute="centerX" secondItem="ZnG-sk-dM8" secondAttribute="centerX" constant="1" id="vOf-P7-lBi"/>
+                                    <constraint firstItem="IVA-AW-LTR" firstAttribute="top" secondItem="HIa-aI-ICD" secondAttribute="bottom" constant="3" id="ynL-84-uib"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-NU-wdO" userLabel="Top containter">
