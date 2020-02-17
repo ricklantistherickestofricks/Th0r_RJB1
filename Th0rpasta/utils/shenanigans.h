@@ -1,10 +1,6 @@
 //
 //  shenanigans.h
-//  Ziyou
-//
-//  Created by Tanay Findley on 7/12/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
 
 #ifndef shenanigans_h
 #define shenanigans_h

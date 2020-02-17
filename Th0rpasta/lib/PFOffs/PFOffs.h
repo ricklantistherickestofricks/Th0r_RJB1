@@ -1,10 +1,6 @@
 //
 //  PFOffs.h
-//  Ziyou
-//
-//  Created by Tanay Findley on 4/9/19.
-//  Copyright © 2019 Tanay Findley. All rights reserved.
-//
+
 
 #ifndef PFOffs_h
 #define PFOffs_h

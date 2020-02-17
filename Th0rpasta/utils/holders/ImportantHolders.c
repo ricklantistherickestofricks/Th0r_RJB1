@@ -1,10 +1,7 @@
 //
 //  VarHolder.c
-//  Ziyou
-//
-//  Created by Tanay Findley on 4/7/19.
-//  Copyright © 2019 Tanay Findley. All rights reserved.
-//
+
+
 #include <mach/port.h>
 
 mach_port_t tfp0 = MACH_PORT_NULL;

@@ -1,10 +1,6 @@
 //
 //  KernelUtils.c
-//  Ziyou
-//
-//  Created by Tanay Findley on 5/8/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
 
 #include "KernelUtils.h"
 #include "ImportantHolders.h"

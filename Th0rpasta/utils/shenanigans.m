@@ -1,10 +1,6 @@
 //
 //  shenanigans.c
-//  Ziyou
-//
-//  Created by Tanay Findley on 7/12/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
 
 #include "shenanigans.h"
 #include "common.h"

@@ -1,10 +1,6 @@
 //
 //  ArchiveUtils.c
-//  Slice
-//
-//  Created by Tanay Findley on 5/9/19.
-//  Copyright © 2019 Slice Team. All rights reserved.
-//
+
 
 #include "ArchiveUtils.h"
 #include "common.h"

@@ -1,10 +1,6 @@
 //
 //  ArchiveUtils.h
-//  Slice
-//
-//  Created by Tanay Findley on 5/9/19.
-//  Copyright © 2019 Slice Team. All rights reserved.
-//
+
 
 #ifndef ArchiveUtils_h
 #define ArchiveUtils_h

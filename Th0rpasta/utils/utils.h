@@ -1,10 +1,6 @@
 //
 //  utils.h
-//  Ziyou
-//
-//  Created by Brandon Plank on 5/8/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
 
 
 #ifndef utils_h

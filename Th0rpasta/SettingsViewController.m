@@ -1,10 +1,6 @@
 //
 //  SettingsViewViewController.m
-//  Ziyou
-//
-//  Created by Tanay Findley on 6/29/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
 
 #import "SettingsViewController.h"
 #import "utils/utils.h"

@@ -1,10 +1,6 @@
 //
 //  ImportantHolders.h
-//  Ziyou
-//
-//  Created by Tanay Findley on 5/8/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
 
 #ifndef ImportantHolders_h
 #define ImportantHolders_h

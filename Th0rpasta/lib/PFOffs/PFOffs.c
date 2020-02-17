@@ -1,10 +1,7 @@
 //
 //  PFOffs.c
-//  Ziyou
-//
-//  Created by Tanay Findley on 4/9/19.
-//  Copyright © 2019 Tanay Findley. All rights reserved.
-//
+
+
 
 #include "PFOffs.h"
 #include "kernel_exec.h"

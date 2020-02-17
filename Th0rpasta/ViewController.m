@@ -1,10 +1,7 @@
 //
 //  ViewController.m
-//  Ziyou
 //
-//  Created by Tanay Findley on 5/7/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
 
 //THIS PROJECT IS IN VERY EARLY STAGES OF DEVELOPMENT!
 

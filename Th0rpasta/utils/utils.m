@@ -1,10 +1,7 @@
 //
 //  utils.m
-//  Ziyou
-//
-//  Created by Brandon Plank on 5/8/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
+
 
 #define KADD_SEARCH 0xfffffff007004000
 

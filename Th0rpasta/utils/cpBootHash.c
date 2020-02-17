@@ -1,10 +1,7 @@
 //
 //  cpBootHash.c
-//  Ziyou
-//
-//  Created by Tanay Findley on 8/18/19.
-//  Copyright © 2019 Ziyou Team. All rights reserved.
-//
+
+
 
 #include "cpBootHash.h"
 
