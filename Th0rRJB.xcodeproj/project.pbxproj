@@ -55,7 +55,6 @@
 		EB97B83F23F2E50C0016525F /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = EB97B82D23F2E50C0016525F /* offsets.m */; };
 		EB97B84123F2E50C0016525F /* kexecute.c in Sources */ = {isa = PBXBuildFile; fileRef = EB97B83123F2E50C0016525F /* kexecute.c */; };
 		EB97B84223F2E50C0016525F /* kernel_exec.m in Sources */ = {isa = PBXBuildFile; fileRef = EB97B83223F2E50C0016525F /* kernel_exec.m */; };
-		EB9AEE8023F4334600EA6F9A /* README in Resources */ = {isa = PBXBuildFile; fileRef = EB9AEE7F23F4334600EA6F9A /* README */; };
 		EB9AEE8423F4422100EA6F9A /* vnode_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9AEE8323F4422100EA6F9A /* vnode_utils.m */; };
 		EB9AEEED23F4430800EA6F9A /* unlocknvram.c in Sources */ = {isa = PBXBuildFile; fileRef = EB9AEEEC23F4430800EA6F9A /* unlocknvram.c */; };
 		EB9AEEF023F443D500EA6F9A /* pac.c in Sources */ = {isa = PBXBuildFile; fileRef = EB9AEEEF23F443D500EA6F9A /* pac.c */; };
@@ -184,7 +183,6 @@
 		EB97B82D23F2E50C0016525F /* offsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = offsets.m; sourceTree = "<group>"; };
 		EB97B83123F2E50C0016525F /* kexecute.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kexecute.c; sourceTree = "<group>"; };
 		EB97B83223F2E50C0016525F /* kernel_exec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kernel_exec.m; sourceTree = "<group>"; };
-		EB9AEE7F23F4334600EA6F9A /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../../../../oob_timestamp/oob_timestamp/README; sourceTree = "<group>"; };
 		EB9AEE8223F4422100EA6F9A /* vnode_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vnode_utils.h; sourceTree = "<group>"; };
 		EB9AEE8323F4422100EA6F9A /* vnode_utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vnode_utils.m; sourceTree = "<group>"; };
 		EB9AEEEB23F4430800EA6F9A /* unlocknvram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unlocknvram.h; sourceTree = "<group>"; };
@@ -507,7 +505,6 @@
 				EB9AEEF123F444B800EA6F9A /* kernel_call.h */,
 				EB9AEEEF23F443D500EA6F9A /* pac.c */,
 				EB9AEEEE23F443D500EA6F9A /* pac.h */,
-				EB9AEE7F23F4334600EA6F9A /* README */,
 				EB97B80823F2E0AD0016525F /* IOKitLib.h */,
 				EB97B80923F2E0AD0016525F /* iosurface.c */,
 				EB97B7FF23F2E0AD0016525F /* iosurface.h */,
@@ -639,7 +636,6 @@
 				EB691CBC23E053A7008D35C9 /* p4circle.png in Resources */,
 				EB691CC123E0DCD4008D35C9 /* Godzilla.mp3 in Resources */,
 				EB691CBD23E053A7008D35C9 /* Th0rDestroyerOfStorms.JPG in Resources */,
-				EB9AEE8023F4334600EA6F9A /* README in Resources */,
 				EB691D5923E0E3DE008D35C9 /* bootstrap in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,6 +830,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
@@ -868,6 +865,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
