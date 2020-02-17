@@ -3230,8 +3230,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2523"
-            endingLineNumber = "2523"
+            startingLineNumber = "2535"
+            endingLineNumber = "2535"
             landmarkName = "execCmdV1(cmd, argc, argv)"
             landmarkType = "9">
          </BreakpointContent>
@@ -7868,8 +7868,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2266"
-            endingLineNumber = "2266"
+            startingLineNumber = "2272"
+            endingLineNumber = "2272"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -7980,8 +7980,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2367"
-            endingLineNumber = "2367"
+            startingLineNumber = "2373"
+            endingLineNumber = "2373"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -8460,8 +8460,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2472"
-            endingLineNumber = "2472"
+            startingLineNumber = "2484"
+            endingLineNumber = "2484"
             landmarkName = "execCmdV1(cmd, argc, argv)"
             landmarkType = "9">
          </BreakpointContent>
@@ -8892,8 +8892,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2382"
-            endingLineNumber = "2382"
+            startingLineNumber = "2388"
+            endingLineNumber = "2388"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -8908,8 +8908,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2318"
-            endingLineNumber = "2318"
+            startingLineNumber = "2324"
+            endingLineNumber = "2324"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9132,8 +9132,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2411"
-            endingLineNumber = "2411"
+            startingLineNumber = "2422"
+            endingLineNumber = "2422"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9276,8 +9276,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2349"
-            endingLineNumber = "2349"
+            startingLineNumber = "2355"
+            endingLineNumber = "2355"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9292,8 +9292,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2359"
-            endingLineNumber = "2359"
+            startingLineNumber = "2365"
+            endingLineNumber = "2365"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9308,8 +9308,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2378"
-            endingLineNumber = "2378"
+            startingLineNumber = "2384"
+            endingLineNumber = "2384"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9324,8 +9324,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2392"
-            endingLineNumber = "2392"
+            startingLineNumber = "2402"
+            endingLineNumber = "2402"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9340,8 +9340,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2396"
-            endingLineNumber = "2396"
+            startingLineNumber = "2407"
+            endingLineNumber = "2407"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9404,8 +9404,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2353"
-            endingLineNumber = "2353"
+            startingLineNumber = "2359"
+            endingLineNumber = "2359"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9468,8 +9468,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2351"
-            endingLineNumber = "2351"
+            startingLineNumber = "2357"
+            endingLineNumber = "2357"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9500,8 +9500,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2352"
-            endingLineNumber = "2352"
+            startingLineNumber = "2358"
+            endingLineNumber = "2358"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9772,8 +9772,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2360"
-            endingLineNumber = "2360"
+            startingLineNumber = "2366"
+            endingLineNumber = "2366"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9820,8 +9820,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2238"
-            endingLineNumber = "2238"
+            startingLineNumber = "2244"
+            endingLineNumber = "2244"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9836,8 +9836,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2308"
-            endingLineNumber = "2308"
+            startingLineNumber = "2314"
+            endingLineNumber = "2314"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9852,8 +9852,8 @@
             filePath = "Th0rpasta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2343"
-            endingLineNumber = "2343"
+            startingLineNumber = "2349"
+            endingLineNumber = "2349"
             landmarkName = "wannaSliceOfMe()"
             landmarkType = "9">
          </BreakpointContent>
@@ -9935,6 +9935,102 @@
             startingLineNumber = "111"
             endingLineNumber = "111"
             landmarkName = "runShenPatch()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E495DB5B-4DD2-421B-AD64-324A80D6CEB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/shenanigans.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "set_csflags_fr(proc, flags, value)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5ED355C1-EB2E-4A5D-BDBE-30AC7896B041"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2370"
+            endingLineNumber = "2370"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81A781B2-211E-4E5F-9CB1-EA3551C9A585"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2400"
+            endingLineNumber = "2400"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF9A799D-1152-4FB3-A3D7-C8545428E126"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2399"
+            endingLineNumber = "2399"
+            landmarkName = "wannaSliceOfMe()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40B14C00-4480-4093-BBAC-E8541EF5B74D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/shenanigans.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "set_cs_platform_binary(proc, value)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75D65361-DB04-46EE-97D2-7826134C9B0F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Th0rpasta/utils/shenanigans.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "set_platform_binary(proc, set)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

@@ -136,7 +136,7 @@ void runShenPatch()
     }
     
     myHost = mach_host_self();
-    set_platform_binary(proc, true);
+    //set_platform_binary(proc, true);
     set_cs_platform_binary(proc, true);
     LOG("Successfully escaped Sandbox.");
 }

@@ -2090,7 +2090,7 @@ void wannaSliceOfMe() {
 //    Packmandone();
     offsetsSPJ_init();
     set_selfproc(current_proc_OOB);
-    set_csflags(current_proc_OOB);
+    //set_csflags(current_proc_OOB);
     runShenPatch();//set_csblob(current_proc_OOB);
 
     //
@@ -2107,7 +2107,13 @@ void wannaSliceOfMe() {
     int rvt = open("/var/mobile/Media/testwrite2020_Media.txt",O_RDWR|O_CREAT);
     printf("[*] Media/testwrite2020_Media.txt write returned rv = %d\n", rvt);
     close(rvt);
+    if (!fileExists("/var/mobile/Media/testwrite2020_Media.txt")) {
+        printf("[*] didn't write ? Media/testwrite2020_Media.txt");
 
+    }else{
+        printf("[*]created a file on var/mobile/Media/testwrite2020_Media.txt");
+
+    }
 
     
     if (!fileExists("/var/containers/Bundle/.installed_rootlessJB3")) {
@@ -2269,7 +2275,7 @@ void wannaSliceOfMe() {
         
         unlink(in_bundle("bootstrap/bins/TweakInject.tar"));
     }
-    cp("/var/containers/Bundle/iosbinpack64/bins/TweakInject.dylib", "/var/containers/Bundle/tweaksupport/usr/lib/TweakInject.dylib");
+    cp("/var/mobile/Bins4Every1/bins/TweakInject.dylib", "/var/containers/Bundle/tweaksupport/usr/lib/TweakInject.dylib");
     
     unlink("/var/log/pspawn_payload_xpcproxy.log");
     
@@ -2389,23 +2395,28 @@ void wannaSliceOfMe() {
     cp(in_bundle("/killall"), "/var/containers/Bundle/iosbinpack64/usr/bin/killall");
 
    char const *somearg =  "backboardd";
-    
-    //execCmdV1(<#const char *cmd#>, <#int argc#>, <#const char *const *argv#>, <#^(pid_t)unrestrict#>)
+    const char *const *someargv ="backboardd";
+    int rjtest = execCmdV1("/var/mobile/Bins4Every1/usr/bin/killall", 0,someargv, NULL);
+    printf("[-] Failed attempt 0 to launch killall = %d\n",rjtest);
+
+    int rjtest2 = execCmd1("/var/mobile/Bins4Every1/usr/bin/killall", "backboardd");
+    printf("[-] Failed attempt 1 to launch killall = %d\n",rjtest2);
+
     int ervtr1K = execCmdV1(in_bundle("/killall"), 0,somearg, NULL);
-    printf("[-] Failed attempt 0 to launch killall = %d\n",ervtr1K);
+    printf("[-] Failed attempt 2 to launch killall = %d\n",ervtr1K);
     int ervtrK = execCmdV1(in_bundle("/killall"), 0,"backboardd", NULL);
-    printf("[-] Failed attempt 0 to launch killall = %d\n",ervtrK);
+    printf("[-] Failed attempt 3 to launch killall = %d\n",ervtrK);
 
     int rvtrK = execCmd1(in_bundle("/killall"), "backboardd");
     if (rvtrK !=0 ){
-        printf("[-] Failed attempt 1 to launch killall = %d\n",rvtrK);
+        printf("[-] Failed attempt 4 to launch killall = %d\n",rvtrK);
     }
     int rvtrK1 = execCmd1(in_bundle("killall"), "backboardd");
 
     //int rvtrK = execCmd1("/var/containers/Bundle/iosbinpack64/usr/bin/killall", "backboardd",NULL, NULL, NULL, NULL, NULL, NULL);
 
     if (rvtrK1 !=0 ){
-        printf("[-] Failed attempt 2 to launch killall = %d\n",rvtrK1);
+        printf("[-] Failed attempt 5 to launch killall = %d\n",rvtrK1);
     }
     
        //------------- launch daeamons -------------//
@@ -2415,7 +2426,7 @@ void wannaSliceOfMe() {
     //term_kexecute();
     //loadingtweaks();
     //finish(loadTweaks);
-     uint64_t launchd_proc = (get_proc_struct_for_pid(1));
+     /*uint64_t launchd_proc = (get_proc_struct_for_pid(1));
      printf("launchd_proc is %llx\n", launchd_proc);
      uint64_t kern_proc = get_proc_struct_for_pid(0);
      printf("kern_proc is %llx\n", kern_proc);
@@ -2425,7 +2436,8 @@ void wannaSliceOfMe() {
      printf("amfid_proc is %llx\n", amfid_proc);
      uint32_t cfprefsd_pid = find_pid_of_proc("cfprefsd");
      printf("cfprefsd_pid is %d\n", cfprefsd_pid);
-     
+     */
+    
     
     th0rlabelyo();
     
